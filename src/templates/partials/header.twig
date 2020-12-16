@@ -1,0 +1,27 @@
+<!--  SECTION HEADER -->
+<header>
+     <!-- Section Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.php?page=home">HAVET.V</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ml-5 mr-auto mb-2 mb-lg-0 d-flex justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link {{ current_page == 'home' ? 'active' : '' }}" aria-current="page" href="index.php?page=home">Présentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ current_page == 'experiences' ? 'active' : '' }}" href="index.php?page=experiences">Expériences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ current_page == 'portfolio' ? 'active' : '' }} " href="index.php?page=portfolio">Portfolio</a>
+                    </li>
+                </ul>    
+            </div>
+        </div>
+    </nav>
+    <!-- Section navbar-End -->
+</header>
+<!-- SECTION HEADER-END -->

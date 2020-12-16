@@ -1,0 +1,30 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Portfolio - {{ parent() }} {% endblock %}
+
+{% block body %}
+<!-- Section Portfolio -->
+<h1 class="text-center my-5">Mon Portfolio</h1>
+    
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    {% for portfolio in portfolios %} 
+        <div class="col">
+            <div class="card text-center border-dark m-3 h-100">
+                <div class="card-header">
+                    <h4>{{ portfolio.TITLE }}</h4>
+                </div>
+                <div class="card-body">  
+                    <span class="card-subtitle mb-2  badge rounded-pill bg-primary">{{ portfolio.TAG }}</span>
+                    <p class="card-text  text-left">{{portfolio.DESCRIPTION | nl2br  }} </p>
+                </div>
+                <div class="card-footer text-muted">
+                    <a href={{ portfolio.URL }} class="btn btn-outline-dark rounded-pill btn-sm">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div> 
+<!-- Section Portfolio-End -->
+{% endblock %}

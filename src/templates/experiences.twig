@@ -1,0 +1,26 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Expériences - {{ parent() }} {% endblock %}
+
+{% block body %}
+<!-- Section Experiences -->  
+<h1 class="text-center my-5">Mes Expériences</h1>
+   
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    {% for experience in experiences %} 
+        <div class="col">
+            <div class="card text-center border-dark m-3 h-100">
+                <div class="card-header">
+                    <h4>{{ experience.TITLE }}</h4>
+                </div>
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted"><strong>{{ experience.COMPANY }}</strong></h6>
+                    <small class="text-muted"><em> {{ experience.START_DATE|date("d/m/Y") }}</em>  -  <em>{{ experience.END_DATE|date("d/m/Y") }}</em> </small>
+                    <p class="card-text">{{experience.DESCRIPTION | nl2br }} </p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>                  
+<!-- Section Experiences-End -->
+{% endblock %}

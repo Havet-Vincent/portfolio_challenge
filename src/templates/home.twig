@@ -1,0 +1,18 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Présentation - {{ parent() }} {% endblock %}
+
+{% block body %}
+    <!-- Section Home -->
+    <h1 class="text-center my-5">Présentation</h1>
+    <div class="row my-5">
+        {% for about in abouts %}
+            <h3 class="mb-3">
+                Bonjour je m'appelle <strong>{{ about.FIRST_NAME}} {{ about.LAST_NAME}}</strong> et je suis développeur web et web mobile.
+            </h3> 
+            <hr class="my-4">           
+            <p>{{ about.DESCRIPTION}}</p>   
+        {% endfor %}
+    </div>
+    <!-- Section Home-End -->
+{% endblock %}
