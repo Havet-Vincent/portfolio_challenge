@@ -31,7 +31,7 @@ DROP TABLE IF EXISTS `EXPERIENCES`;
 CREATE TABLE `EXPERIENCES` (
   `ID` int NOT NULL AUTO_INCREMENT,
   `USER_ID` int NOT NULL,
-  `TITLE` varchar(20) NOT NULL,
+  `TITLE` varchar(30) NOT NULL,
   `COMPANY` varchar(20) NOT NULL,
   `DESCRIPTION` longtext,
   `START_DATE` date NOT NULL,
@@ -48,7 +48,10 @@ CREATE TABLE `EXPERIENCES` (
 
 LOCK TABLES `EXPERIENCES` WRITE;
 /*!40000 ALTER TABLE `EXPERIENCES` DISABLE KEYS */;
-INSERT INTO `EXPERIENCES` (`ID`, `USER_ID`, `TITLE`, `COMPANY`, `DESCRIPTION`, `START_DATE`, `END_DATE`) VALUES (1,1,'CTO','La Fabrik du Numé','Lorem ipsum dolor sit amet','2020-11-01',NULL);
+INSERT INTO `EXPERIENCES` (`ID`, `USER_ID`, `TITLE`, `COMPANY`, `DESCRIPTION`, `START_DATE`, `END_DATE`) VALUES (1,1,'Développeur Front',"O\'Clock",'Application SPA First (2 front - 2 back) en 4 sprints.','2020-04-03','2020-05-05');
+INSERT INTO `EXPERIENCES` (`ID`, `USER_ID`, `TITLE`, `COMPANY`, `DESCRIPTION`, `START_DATE`, `END_DATE`) VALUES (2,1,'Développeur Back',"O\'Clock",'Application API RESTfull (3 back - 2 front) en 4 sprints.','2019-11-17','2019-12-19');
+INSERT INTO `EXPERIENCES` (`ID`, `USER_ID`, `TITLE`, `COMPANY`, `DESCRIPTION`, `START_DATE`, `END_DATE`) VALUES (3,1,'Technicien Informatique','Dupont/Dow','Déploiement de Windows 7 vers Windows 10.','2019-05-16','2019-07-10');
+INSERT INTO `EXPERIENCES` (`ID`, `USER_ID`, `TITLE`, `COMPANY`, `DESCRIPTION`, `START_DATE`, `END_DATE`) VALUES (4,1,'Technicien Micro IT','Sodatec/Cités','Déploiement, Maintenance, Installation de caisses, serveurs, switchs et périphériques. Maintenance Moneyline( bornes IRIS, ADD).','2017-11-05','2018-12-21');
 /*!40000 ALTER TABLE `EXPERIENCES` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -80,7 +83,10 @@ CREATE TABLE `FORMATIONS` (
 
 LOCK TABLES `FORMATIONS` WRITE;
 /*!40000 ALTER TABLE `FORMATIONS` DISABLE KEYS */;
-INSERT INTO `FORMATIONS` (`ID`, `USER_ID`, `TITLE`, `SCHOOL`, `GRADUATE`, `START_DATE`, `END_DATE`, `DESCRIPTION`) VALUES (1,1,'Expert Coding Class','CondingLifeSchool','LifeSchool Degree','2016-09-01','2018-06-30','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat viverra enim, in blandit dui congue id. Cras viverra maximus fermentum. Donec vel arcu venenatis, convallis dolor sit amet, semper tortor. Phasellus varius urna in tortor aliquam, in tempor mauris maximus. Phasellus ac nibh at ante vestibulum dictum. Duis nibh mi, porttitor eu mi nec, dignissim interdum velit. Nulla tortor turpis, finibus ut viverra quis, faucibus vitae massa. Aliquam id nunc imperdiet, varius mi id, ultricies leo. Nullam pretium orci quis arcu blandit, id tincidunt sem laoreet. Nullam mattis vehicula sem. Ut mattis porttitor nunc et sagittis. Nullam vitae eros augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
+INSERT INTO `FORMATIONS` (`ID`, `USER_ID`, `TITLE`, `SCHOOL`, `GRADUATE`, `START_DATE`, `END_DATE`, `DESCRIPTION`) VALUES (1,1,'Développeur Web et Web Mobile','OClock','Niveau V','2020-03-03','2020-04-02','Spécialisation React.');
+INSERT INTO `FORMATIONS` (`ID`, `USER_ID`, `TITLE`, `SCHOOL`, `GRADUATE`, `START_DATE`, `END_DATE`, `DESCRIPTION`) VALUES (2,1,'Développeur Web et Web Mobile','OClock','Niveau V','2019-07-15','2020-11-17','Spécialisation Symfony.');
+INSERT INTO `FORMATIONS` (`ID`, `USER_ID`, `TITLE`, `SCHOOL`, `GRADUATE`, `START_DATE`, `END_DATE`, `DESCRIPTION`) VALUES (3,1,'Développeur Web et Web Mobile','OClock','Niveau V','2019-07-15','2020-11-17','Socle HTML, CSS, PHP, JavaScript.');
+INSERT INTO `FORMATIONS` (`ID`, `USER_ID`, `TITLE`, `SCHOOL`, `GRADUATE`, `START_DATE`, `END_DATE`, `DESCRIPTION`) VALUES (4,1,'Technicien Informatique','AFPA','Niveau V','2020-03-03','2020-04-02','Technicien Supérieur Gestionnaire de ressources informatiques.');
 /*!40000 ALTER TABLE `FORMATIONS` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -110,7 +116,10 @@ CREATE TABLE `PORTFOLIO` (
 
 LOCK TABLES `PORTFOLIO` WRITE;
 /*!40000 ALTER TABLE `PORTFOLIO` DISABLE KEYS */;
-INSERT INTO `PORTFOLIO` (`ID`, `USER_ID`, `TITLE`, `CREATION_DATE`, `DESCRIPTION`, `URL`) VALUES (1,1,'COVID19 - Attestation','2020-04-01','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat viverra enim, in blandit dui congue id. Cras viverra maximus fermentum. Donec vel arcu venenatis, convallis dolor sit amet, semper tortor. Phasellus varius urna in tortor aliquam, in tempor mauris maximus. Phasellus ac nibh at ante vestibulum dictum. Duis nibh mi, porttitor eu mi nec, dignissim interdum velit. Nulla tortor turpis, finibus ut viverra quis, faucibus vitae massa. Aliquam id nunc imperdiet, varius mi id, ultricies leo. Nullam pretium orci quis arcu blandit, id tincidunt sem laoreet. Nullam mattis vehicula sem. Ut mattis porttitor nunc et sagittis. Nullam vitae eros augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.','https://covid19-attestation.stoodent.fr/');
+INSERT INTO `PORTFOLIO` (`ID`, `USER_ID`, `TITLE`, `CREATION_DATE`, `DESCRIPTION`, `URL`) VALUES (1,1,"o\'Local",'2020-05-05',"o\'Local a pour objectif de mettre à disposition des consommateurs un moyen de connaître les commerçants de proximité proposant des produits issus de producteurs locaux.",'https://github.com/Havet-Vincent/OLocal');
+INSERT INTO `PORTFOLIO` (`ID`, `USER_ID`, `TITLE`, `CREATION_DATE`, `DESCRIPTION`, `URL`) VALUES (2,1,"Z\'Artisan",'2019-12-19','Site de mise en relation des particuliers avec des professionnels locaux et avec possibilité de les noter.','https://github.com/Havet-Vincent/zartisanV2');
+INSERT INTO `PORTFOLIO` (`ID`, `USER_ID`, `TITLE`, `CREATION_DATE`, `DESCRIPTION`, `URL`) VALUES (3,1,'Pokedex','2019-10-13',' Dictionnaire de tous les pokémons.','https://github.com/Havet-Vincent/pokedex');
+
 /*!40000 ALTER TABLE `PORTFOLIO` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -137,7 +146,7 @@ CREATE TABLE `PORTFOLIO_TAGS` (
 
 LOCK TABLES `PORTFOLIO_TAGS` WRITE;
 /*!40000 ALTER TABLE `PORTFOLIO_TAGS` DISABLE KEYS */;
-INSERT INTO `PORTFOLIO_TAGS` (`ID`, `PORTFOLIO_ID`, `TAG`) VALUES (1,1,'ANGULAR'),(2,1,'MATERIALIZECSS');
+INSERT INTO `PORTFOLIO_TAGS` (`ID`, `PORTFOLIO_ID`, `TAG`) VALUES (1,1,'React'),(2,2,'Symfony'),(3,3,'PHP');
 /*!40000 ALTER TABLE `PORTFOLIO_TAGS` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -166,7 +175,11 @@ CREATE TABLE `USER` (
 
 LOCK TABLES `USER` WRITE;
 /*!40000 ALTER TABLE `USER` DISABLE KEYS */;
-INSERT INTO `USER` (`ID`, `LAST_NAME`, `USERNAME`, `FIRST_NAME`, `BIRTH_DATE`, `DESCRIPTION`) VALUES (1,'Doe','John','john.doe','1990-06-12','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat viverra enim, in blandit dui congue id. Cras viverra maximus fermentum. Donec vel arcu venenatis, convallis dolor sit amet, semper tortor. Phasellus varius urna in tortor aliquam, in tempor mauris maximus. Phasellus ac nibh at ante vestibulum dictum. Duis nibh mi, porttitor eu mi nec, dignissim interdum velit. Nulla tortor turpis, finibus ut viverra quis, faucibus vitae massa. Aliquam id nunc imperdiet, varius mi id, ultricies leo. Nullam pretium orci quis arcu blandit, id tincidunt sem laoreet. Nullam mattis vehicula sem. Ut mattis porttitor nunc et sagittis. Nullam vitae eros augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
+INSERT INTO `USER` (`ID`, `LAST_NAME`, `USERNAME`, `FIRST_NAME`, `BIRTH_DATE`, `DESCRIPTION`) VALUES (1,'Havet','Vincent','Vincent','1961-02-21',"Développeur web reconverti depuis Mai 2020 suite à ma formation à l\'école O\'clock en téléprésentiel, j\'ai eu un socle de 700 heures sur HTML5, CSS3, PHP, JAVASCRIPT.
+Tous les jours nous avions un challenge à effectuer soit en solo ou en collaboration (pair programming, discord,slack, trello).
+Ensuite j\'ai suivi deux spécialisations : une sur Symfony et une sur ReactJs comprenant chacune un projet from scratch (Cahier des Charges, MVP, MCD, Wireframes, Users Stories ...) d'une durée d'un mois par équipe en 4 sprints.
+
+Je suis impatient d\'intégrer une structure dynamique pour mettre en pratique mes nouvelles connaissances et toutes celles à venir.");
 /*!40000 ALTER TABLE `USER` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
